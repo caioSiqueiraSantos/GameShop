@@ -83,7 +83,7 @@ export default function GameDetail() {
                 </span>
               ) : (
                 <button
-                  onClick={() => { buyGame(game.id); navigate('/profile') }}
+                  onClick={() => { buyGame(game.id); navigate('/library') }}
                   className="bg-indigo-600 hover:bg-indigo-500 text-white text-sm px-6 py-2 rounded transition-colors"
                 >
                   Comprar

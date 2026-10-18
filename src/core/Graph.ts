@@ -5,6 +5,7 @@ export interface User {
   avatar: string
   friends: string[]
   library: string[]
+  password?: string
 }
 
 export interface Game {

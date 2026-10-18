@@ -12,9 +12,15 @@ interface State {
   games: Game[]
   interactions: Interaction[]
   login: (id: string) => void
+  loginWithCredentials: (identifier: string, password: string) => { success: boolean; error?: string }
+  registerUser: (data: { username: string; displayName: string; password: string }) => {
+    success: boolean
+    error?: string
+  }
   logout: () => void
   buyGame: (gameId: string) => void
   addFriend: (targetId: string) => void
+  removeFriend: (targetId: string) => void
   addGame: (game: Omit<Game, 'id'>) => void
   deleteGame: (gameId: string) => void
   generateRandom: () => void
@@ -30,6 +36,84 @@ export const useStore = create<State>()(
       interactions: seed.interactions,
 
       login: (id) => set({ currentUserId: id }),
+
+      loginWithCredentials: (identifier: string, password: string) => {
+        const { users } = get()
+        const cleanId = identifier.trim().toLowerCase()
+        if (!cleanId) {
+          return { success: false, error: 'Por favor, informe seu usuário ou e-mail.' }
+        }
+        if (!password) {
+          return { success: false, error: 'Por favor, informe sua senha.' }
+        }
+
+        const found = users.find(
+          u =>
+            u.username.toLowerCase() === cleanId ||
+            u.displayName.toLowerCase() === cleanId ||
+            u.id.toLowerCase() === cleanId
+        )
+
+        if (!found) {
+          return {
+            success: false,
+            error: 'Usuário não encontrado.',
+          }
+        }
+
+        const userPassword = found.password || 'admin123'
+        if (password !== userPassword) {
+          return {
+            success: false,
+            error: 'Senha incorreta.',
+          }
+        }
+
+        set({ currentUserId: found.id })
+        return { success: true }
+      },
+
+      registerUser: ({ username, displayName, password }) => {
+        const { users } = get()
+        const cleanUsername = username.trim().toLowerCase().replace(/[^a-z0-9_]/g, '')
+        const cleanDisplayName = displayName.trim()
+        const cleanPassword = password.trim()
+
+        if (!cleanDisplayName) {
+          return { success: false, error: 'Por favor, informe seu nome de exibição.' }
+        }
+        if (!cleanUsername || cleanUsername.length < 3) {
+          return {
+            success: false,
+            error: 'O nome de usuário deve ter no mínimo 3 caracteres (apenas letras, números e underline).',
+          }
+        }
+        if (!cleanPassword || cleanPassword.length < 4) {
+          return { success: false, error: 'A senha deve conter no mínimo 4 caracteres.' }
+        }
+
+        const exists = users.some(u => u.username.toLowerCase() === cleanUsername)
+        if (exists) {
+          return { success: false, error: 'Este nome de usuário já está em uso.' }
+        }
+
+        const newUser: User = {
+          id: `u${Date.now()}`,
+          username: cleanUsername,
+          displayName: cleanDisplayName,
+          avatar: '',
+          friends: [],
+          library: [],
+          password: cleanPassword,
+        }
+
+        set({
+          users: [...users, newUser],
+          currentUserId: newUser.id,
+        })
+
+        return { success: true }
+      },
 
       logout: () => set({ currentUserId: null }),
 
@@ -57,6 +141,20 @@ export const useStore = create<State>()(
               return { ...u, friends: [...u.friends, targetId] }
             if (u.id === targetId && !u.friends.includes(currentUserId))
               return { ...u, friends: [...u.friends, currentUserId] }
+            return u
+          }),
+        })
+      },
+
+      removeFriend: (targetId) => {
+        const { currentUserId, users } = get()
+        if (!currentUserId || currentUserId === targetId) return
+        set({
+          users: users.map(u => {
+            if (u.id === currentUserId)
+              return { ...u, friends: u.friends.filter(id => id !== targetId) }
+            if (u.id === targetId)
+              return { ...u, friends: u.friends.filter(id => id !== currentUserId) }
             return u
           }),
         })
