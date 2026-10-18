@@ -15,12 +15,30 @@ export interface Game {
   description: string
   cover: string
   price: number
+  tagline?: string
+  bannerCover?: string
 }
 
 export interface Interaction {
   userId: string
   gameId: string
   purchasedAt: string
+}
+
+export interface CartItem {
+  gameId: string
+  recipientUserId?: string
+}
+
+export interface Review {
+  id: string
+  gameId: string
+  userId: string
+  recommended: boolean
+  hoursPlayed: number
+  content: string
+  createdAt: string
+  helpfulVotedBy: string[]
 }
 
 export class Graph {

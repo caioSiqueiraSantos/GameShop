@@ -6,7 +6,7 @@
       "displayName": "Caio Siqueira",
       "avatar": "",
       "friends": ["u2", "u3"],
-      "library": ["g1", "g2", "g4"],
+      "library": ["g1", "g2", "g4", "g11", "g12", "g15"],
       "password": "admin123"
     },
     {
@@ -15,7 +15,7 @@
       "displayName": "Fillipy Mendes",
       "avatar": "",
       "friends": ["u1", "u4", "u5"],
-      "library": ["g1", "g6", "g5"],
+      "library": ["g1", "g6", "g5", "g11", "g13", "g22"],
       "password": "admin123"
     },
     {
@@ -24,7 +24,7 @@
       "displayName": "Leonardo Masanao",
       "avatar": "",
       "friends": ["u1", "u6"],
-      "library": ["g9", "g10", "g5"],
+      "library": ["g9", "g10", "g5", "g12", "g16", "g18"],
       "password": "admin123"
     },
     {
@@ -33,7 +33,7 @@
       "displayName": "Maria Lima",
       "avatar": "",
       "friends": ["u2", "u7"],
-      "library": ["g8", "g7", "g2"],
+      "library": ["g8", "g7", "g2", "g14", "g19", "g20"],
       "password": "admin123"
     },
     {
@@ -42,7 +42,7 @@
       "displayName": "João Pedro",
       "avatar": "",
       "friends": ["u2", "u6"],
-      "library": ["g1", "g3", "g2"],
+      "library": ["g1", "g3", "g2", "g15", "g17", "g25"],
       "password": "admin123"
     },
     {
@@ -51,7 +51,7 @@
       "displayName": "Ana Beatriz",
       "avatar": "",
       "friends": ["u3", "u5", "u7"],
-      "library": ["g8", "g7", "g9", "g10"],
+      "library": ["g8", "g7", "g9", "g10", "g19", "g21", "g24"],
       "password": "admin123"
     },
     {
@@ -60,7 +60,7 @@
       "displayName": "Pedro Alves",
       "avatar": "",
       "friends": ["u4", "u6"],
-      "library": ["g10", "g5", "g6"],
+      "library": ["g10", "g5", "g6", "g16", "g23", "g26"],
       "password": "admin123"
     },
     {
@@ -69,7 +69,7 @@
       "displayName": "Sofia Rocha",
       "avatar": "",
       "friends": [],
-      "library": ["g7", "g8", "g2"],
+      "library": ["g7", "g8", "g2", "g14", "g20", "g21"],
       "password": "admin123"
     }
   ],
@@ -153,33 +153,185 @@
       "description": "O mais icônico shooter competitivo do mundo, completamente reconstruído na Source 2.",
       "cover": "/covers/cs2.jpg",
       "price": 0
+    },
+    {
+      "id": "g11",
+      "title": "Red Dead Redemption 2",
+      "category": "Action",
+      "description": "Viva a jornada épica do fora-da-lei Arthur Morgan e da gangue Van der Linde no crepúsculo do Velho Oeste americano.",
+      "cover": "/covers/rdr2.jpg",
+      "price": 149.9
+    },
+    {
+      "id": "g12",
+      "title": "Baldur's Gate 3",
+      "category": "RPG",
+      "description": "RPG narrativo aclamado ambientado no universo de Dungeons & Dragons, onde cada escolha define o destino do reino.",
+      "cover": "/covers/baldurs-gate-3.jpg",
+      "price": 199.9
+    },
+    {
+      "id": "g13",
+      "title": "God of War",
+      "category": "Action",
+      "description": "Kratos e seu filho Atreus enfrentam perigos colossais nas terras nórdicas em uma jornada de redenção e batalha mitológica.",
+      "cover": "/covers/god-of-war.jpg",
+      "price": 129.9
+    },
+    {
+      "id": "g14",
+      "title": "Hollow Knight",
+      "category": "Action",
+      "description": "Explore um vasto e misterioso reino subterrâneo arruinado em um dos metroidvanias mais aclamados de todos os tempos.",
+      "cover": "/covers/hollow-knight.jpg",
+      "price": 46.9
+    },
+    {
+      "id": "g15",
+      "title": "Dark Souls III",
+      "category": "RPG",
+      "description": "Mergulhe em um mundo decadente de cinzas e chamas, com combate desafiador e chefes implacáveis que testam suas habilidades.",
+      "cover": "/covers/dark-souls-3.jpg",
+      "price": 149.9
+    },
+    {
+      "id": "g16",
+      "title": "Apex Legends",
+      "category": "FPS",
+      "description": "Battle Royale estratégico em equipe com personagens lendários munidos de habilidades extraordinárias em combate dinâmico.",
+      "cover": "/covers/apex-legends.jpg",
+      "price": 0
+    },
+    {
+      "id": "g17",
+      "title": "DOOM Eternal",
+      "category": "FPS",
+      "description": "Velocidade frenética e poder supremo contra hordas demoníacas que invadiram a Terra.",
+      "cover": "/covers/doom-eternal.jpg",
+      "price": 89.9
+    },
+    {
+      "id": "g18",
+      "title": "Overwatch 2",
+      "category": "FPS",
+      "description": "Shooter de ação em equipes 5v5 com um elenco vibrante de heróis futuristas disputando objetivos estratégicos.",
+      "cover": "/covers/overwatch-2.jpg",
+      "price": 0
+    },
+    {
+      "id": "g19",
+      "title": "Terraria",
+      "category": "Sandbox",
+      "description": "Aventura sandbox 2D onde você pode cavar, construir, minerar e enfrentar dezenas de chefes em mundos gerados proceduralmente.",
+      "cover": "/covers/terraria.jpg",
+      "price": 32.9
+    },
+    {
+      "id": "g20",
+      "title": "The Sims 4",
+      "category": "Simulation",
+      "description": "Liberte sua criatividade criando personagens únicos, construindo casas personalizadas e explorando vidas virtuais completas.",
+      "cover": "/covers/the-sims-4.jpg",
+      "price": 0
+    },
+    {
+      "id": "g21",
+      "title": "Cities: Skylines",
+      "category": "Simulation",
+      "description": "O clássico moderno de simulação de cidades. Gerencie economia, transportes públicos, infraestrutura e expansão urbana.",
+      "cover": "/covers/cities-skylines.jpg",
+      "price": 69.9
+    },
+    {
+      "id": "g22",
+      "title": "Resident Evil 4",
+      "category": "Action",
+      "description": "Leon S. Kennedy é enviado em uma missão perigosa para resgatar a filha do presidente em um vilarejo repleto de horrores biológicos.",
+      "cover": "/covers/resident-evil-4.jpg",
+      "price": 169.9
+    },
+    {
+      "id": "g23",
+      "title": "Forza Horizon 5",
+      "category": "Simulation",
+      "description": "Aventura automotiva em mundo aberto pelas paisagens espetaculares do México com centenas de carros customizáveis.",
+      "cover": "/covers/forza-horizon-5.jpg",
+      "price": 179.9
+    },
+    {
+      "id": "g24",
+      "title": "Portal 2",
+      "category": "FPS",
+      "description": "Obra-prima de quebra-cabeças em primeira pessoa com mecânicas inovadoras de física, portais e muito humor sarcástico.",
+      "cover": "/covers/portal-2.jpg",
+      "price": 32.9
+    },
+    {
+      "id": "g25",
+      "title": "Monster Hunter: World",
+      "category": "RPG",
+      "description": "Aventure-se no Novo Mundo caçando criaturas majestosas e selvagens usando um arsenal rico de armas e táticas de combate.",
+      "cover": "/covers/monster-hunter-world.jpg",
+      "price": 99.9
+    },
+    {
+      "id": "g26",
+      "title": "Rust",
+      "category": "Sandbox",
+      "description": "Sobrevivência intensa multiplayer onde você deve coletar recursos, construir bases fortificadas e sobreviver contra outros jogadores.",
+      "cover": "/covers/rust.jpg",
+      "price": 103.9
     }
   ],
   "interactions": [
     { "userId": "u1", "gameId": "g1", "purchasedAt": "2026-01-10" },
     { "userId": "u1", "gameId": "g2", "purchasedAt": "2026-01-15" },
     { "userId": "u1", "gameId": "g4", "purchasedAt": "2026-02-01" },
+    { "userId": "u1", "gameId": "g11", "purchasedAt": "2026-02-10" },
+    { "userId": "u1", "gameId": "g12", "purchasedAt": "2026-02-18" },
+    { "userId": "u1", "gameId": "g15", "purchasedAt": "2026-03-01" },
     { "userId": "u2", "gameId": "g1", "purchasedAt": "2026-01-12" },
     { "userId": "u2", "gameId": "g6", "purchasedAt": "2026-02-03" },
     { "userId": "u2", "gameId": "g5", "purchasedAt": "2026-02-20" },
+    { "userId": "u2", "gameId": "g11", "purchasedAt": "2026-02-24" },
+    { "userId": "u2", "gameId": "g13", "purchasedAt": "2026-03-02" },
+    { "userId": "u2", "gameId": "g22", "purchasedAt": "2026-03-15" },
     { "userId": "u3", "gameId": "g9", "purchasedAt": "2026-01-05" },
     { "userId": "u3", "gameId": "g10", "purchasedAt": "2026-01-06" },
     { "userId": "u3", "gameId": "g5", "purchasedAt": "2026-03-01" },
+    { "userId": "u3", "gameId": "g12", "purchasedAt": "2026-03-05" },
+    { "userId": "u3", "gameId": "g16", "purchasedAt": "2026-03-10" },
+    { "userId": "u3", "gameId": "g18", "purchasedAt": "2026-03-12" },
     { "userId": "u4", "gameId": "g8", "purchasedAt": "2026-01-20" },
     { "userId": "u4", "gameId": "g7", "purchasedAt": "2026-02-10" },
     { "userId": "u4", "gameId": "g2", "purchasedAt": "2026-03-05" },
+    { "userId": "u4", "gameId": "g14", "purchasedAt": "2026-03-08" },
+    { "userId": "u4", "gameId": "g19", "purchasedAt": "2026-03-11" },
+    { "userId": "u4", "gameId": "g20", "purchasedAt": "2026-03-14" },
     { "userId": "u5", "gameId": "g1", "purchasedAt": "2026-01-18" },
     { "userId": "u5", "gameId": "g3", "purchasedAt": "2026-02-14" },
     { "userId": "u5", "gameId": "g2", "purchasedAt": "2026-03-10" },
+    { "userId": "u5", "gameId": "g15", "purchasedAt": "2026-03-12" },
+    { "userId": "u5", "gameId": "g17", "purchasedAt": "2026-03-14" },
+    { "userId": "u5", "gameId": "g25", "purchasedAt": "2026-03-18" },
     { "userId": "u6", "gameId": "g8", "purchasedAt": "2026-01-25" },
     { "userId": "u6", "gameId": "g7", "purchasedAt": "2026-02-05" },
     { "userId": "u6", "gameId": "g9", "purchasedAt": "2026-02-18" },
     { "userId": "u6", "gameId": "g10", "purchasedAt": "2026-03-02" },
+    { "userId": "u6", "gameId": "g19", "purchasedAt": "2026-03-06" },
+    { "userId": "u6", "gameId": "g21", "purchasedAt": "2026-03-12" },
+    { "userId": "u6", "gameId": "g24", "purchasedAt": "2026-03-15" },
     { "userId": "u7", "gameId": "g10", "purchasedAt": "2026-01-30" },
     { "userId": "u7", "gameId": "g5", "purchasedAt": "2026-02-22" },
     { "userId": "u7", "gameId": "g6", "purchasedAt": "2026-03-08" },
+    { "userId": "u7", "gameId": "g16", "purchasedAt": "2026-03-11" },
+    { "userId": "u7", "gameId": "g23", "purchasedAt": "2026-03-16" },
+    { "userId": "u7", "gameId": "g26", "purchasedAt": "2026-03-20" },
     { "userId": "u8", "gameId": "g7", "purchasedAt": "2026-02-01" },
     { "userId": "u8", "gameId": "g8", "purchasedAt": "2026-02-15" },
-    { "userId": "u8", "gameId": "g2", "purchasedAt": "2026-03-12" }
+    { "userId": "u8", "gameId": "g2", "purchasedAt": "2026-03-12" },
+    { "userId": "u8", "gameId": "g14", "purchasedAt": "2026-03-14" },
+    { "userId": "u8", "gameId": "g20", "purchasedAt": "2026-03-17" },
+    { "userId": "u8", "gameId": "g21", "purchasedAt": "2026-03-21" }
   ]
 }
